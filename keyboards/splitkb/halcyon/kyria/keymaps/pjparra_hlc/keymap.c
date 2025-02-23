@@ -447,3 +447,15 @@ const key_override_t *key_overrides[] = {
 	&dot_key_override,
 	&quot_key_override,
 };
+
+////////////////
+// Quick tap
+////////////////
+uint16_t get_quick_tap_term(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case SFT_SPC:
+            return 0;
+        default:
+            return QUICK_TAP_TERM;
+    }
+}
