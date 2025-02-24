@@ -335,43 +335,6 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
     [8] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU),  ENCODER_CCW_CW(KC_VOLD, KC_VOLU),  ENCODER_CCW_CW(RM_VALD, RM_VALU),  ENCODER_CCW_CW(RM_VALD, RM_VALU) },
 };
 #endif
-/*
-#ifdef ENCODER_ENABLE
-bool encoder_update_user(uint8_t index, bool clockwise) {
-
-    if (index == 0) {
-        // Left / right arrows
-        if (clockwise) {
-            tap_code(KC_RIGHT);
-        } else {
-            tap_code(KC_LEFT);
-        }
-    } else if (index == 1) {
-        // Left / right arrows
-        if (clockwise) {
-            tap_code(KC_RIGHT);
-        } else {
-            tap_code(KC_LEFT);
-        }
-    } else if (index == 2) {
-        // Up / down arrows
-        if (clockwise) {
-            tap_code(KC_DOWN);
-        } else {
-            tap_code(KC_UP);
-        }
-    } else if (index == 3) {
-        // Up / down arrows
-        if (clockwise) {
-            tap_code(KC_DOWN);
-        } else {
-            tap_code(KC_UP);
-        }
-    }
-    return false;
-}
-#endif
-*/
 
 //////////////////
 // Macros
@@ -440,12 +403,14 @@ combo_t key_combos[] = {
 const key_override_t comm_key_override = ko_make_basic(MOD_MASK_SHIFT, FR_COMM, FR_LABK);
 const key_override_t dot_key_override = ko_make_basic(MOD_MASK_SHIFT, FR_DOT, FR_RABK);
 const key_override_t quot_key_override = ko_make_basic(MOD_MASK_SHIFT, FR_QUOT, FR_DQUO);
+const key_override_t slash_key_override = ko_make_basic(MOD_MASK_SHIFT, FR_SLSH, FR_QUES);
 
 // This globally defines all key overrides to be used
 const key_override_t *key_overrides[] = {
 	&comm_key_override,
 	&dot_key_override,
 	&quot_key_override,
+    &slash_key_override,
 };
 
 ////////////////
