@@ -147,7 +147,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * Nav Layer: Media, navigation
  *
  * ,-------------------------------------------.                              ,-------------------------------------------.
- * |        | PgUp | Home |   ↑  | End  | PrtSc|                              |      |BrwsBk|BrwsRf|BrwsFw|      |        |
+ * |        | PgUp | Home |   ↑  | End  | PrtSc|                              |      |BrwsBk|BrwsRf|BrwsFw| Calc |        |
  * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
  * |        | PgDn |  ←   |   ↓  |   →  |CapsLk|                              |      | Shift| Ctrl |  Alt |  GUI |        |
  * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
@@ -161,7 +161,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------'                                              `-----------------------------------'
  */
     [_NAV] = LAYOUT_split_3x6_5_hlc(
-      _______, KC_PGUP, KC_HOME,   KC_UP,  KC_END, KC_PSCR,                                     _______, KC_WBAK, KC_WREF, KC_WFWD, _______, _______,
+      _______, KC_PGUP, KC_HOME,   KC_UP,  KC_END, KC_PSCR,                                     _______, KC_WBAK, KC_WREF, KC_WFWD, KC_CALC, _______,
       _______, KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT, KC_CAPS,                                     _______, KC_RSFT, KC_RCTL, KC_LALT, KC_RGUI, _______,
       _______,     UDO,     CUT,     CPY,     PST,     RDO, _______, KC_SCRL, _______, _______, _______, _______, _______, _______, _______, _______,
                                  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
@@ -172,7 +172,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * Nav Mac Layer: Media, navigation
  *
  * ,-------------------------------------------.                              ,-------------------------------------------.
- * |        | PgUp | Home |   ↑  | End  | PrtSc|                              |      |BrwsBk|BrwsRf|BrwsFw|      |        |
+ * |        | PgUp | Home |   ↑  | End  | PrtSc|                              |      |BrwsBk|BrwsRf|BrwsFw| Calc |        |
  * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
  * |        | PgDn |  ←   |   ↓  |   →  |CapsLk|                              |      | Shift|  GUI |  Alt | Ctrl |        |
  * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
@@ -186,7 +186,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------'                                              `-----------------------------------'
  */
     [_NAV_MAC] = LAYOUT_split_3x6_5_hlc(
-      _______, KC_PGUP, KC_HOME,   KC_UP,  KC_END, KC_PSCR,                                     _______, KC_WBAK, KC_WREF, KC_WFWD, _______, _______,
+      _______, KC_PGUP, KC_HOME,   KC_UP,  KC_END, KC_PSCR,                                     _______, KC_WBAK, KC_WREF, KC_WFWD, KC_CALC, _______,
       _______, KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT, KC_CAPS,                                     _______, KC_RSFT, KC_RGUI, KC_LALT, KC_RCTL, _______,
       _______, UDO_MAC, CUT_MAC, CPY_MAC, PST_MAC, RDO_MAC,  KC_NUM, KC_SCRL, _______, _______, _______, _______, _______, _______, _______, _______,
                                  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
