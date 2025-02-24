@@ -4,6 +4,7 @@
 #include QMK_KEYBOARD_H
 
 #include "keymap_french.h"
+#include "sendstring_french.h"
 
 enum layers {
     _COLEMAK_DH = 0,
