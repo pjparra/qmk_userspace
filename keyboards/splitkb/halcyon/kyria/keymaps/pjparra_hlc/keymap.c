@@ -236,7 +236,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------'                                              `-----------------------------------'
  */
     [_SYM_MAC] = LAYOUT_split_3x6_5_hlc(
-      _______, FR_MINS, FR_UNDS, FR_ASTR, FR_AMPR,  FR_EUR,                                     FR_LBRC,   FR_7 ,   FR_8 ,   FR_9 , FR_RBRC, _______,
+      _______, FR_MINS, FR_UNDS, FR_ASTR, FR_AMPR, FR_EURO,                                     FR_LBRC,   FR_7 ,   FR_8 ,   FR_9 , FR_RBRC, _______,
      FR_LCBR , FR_SCLN, FR_CIRC, FR_PERC,  FR_DLR, FR_PLUS,                                      FR_EQL,   FR_4 ,   FR_5 ,   FR_6 , FR_COLN, FR_RCBR,
       _______, FR_TILD, FR_HASH,   FR_AT, FR_EXLM, FR_PIPE, _______, _______, _______, _______, FR_BSLS,   FR_1 ,   FR_2 ,   FR_3 , FR_GRV , _______,
                                  _______, _______, _______, _______, _______, _______,   FR_0 , FR_COMM, FR_DOT , _______,
