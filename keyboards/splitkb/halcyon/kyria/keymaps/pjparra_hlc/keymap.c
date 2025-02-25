@@ -53,13 +53,13 @@ enum layers {
 #define UDO      LCTL(FR_Z)
 #define CUT      LCTL(FR_X)
 #define CPY      LCTL(FR_C)
-#define PST      LCTL(FR_P)
+#define PST      LCTL(FR_V)
 #define RDO      LCTL(FR_Y)
 
 #define UDO_MAC  LGUI(FR_Z)
 #define CUT_MAC  LGUI(FR_X)
 #define CPY_MAC  LGUI(FR_C)
-#define PST_MAC  LGUI(FR_P)
+#define PST_MAC  LGUI(FR_V)
 #define RDO_MAC  LSFT(LGUI(FR_Z))
 
 // Note: LAlt/Enter (ALT_ENT) is not the same thing as the keyboard shortcut Alt+Enter.
