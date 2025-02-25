@@ -3,3 +3,4 @@ USER_NAME := halcyon_modules
 COMBO_ENABLE = yes
 KEY_OVERRIDE_ENABLE = yes
 ENCODER_MAP_ENABLE = yes
+LAYER_LOCK_ENABLE = yes
