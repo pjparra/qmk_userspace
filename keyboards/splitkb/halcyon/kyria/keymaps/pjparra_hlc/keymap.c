@@ -343,7 +343,6 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
 enum custom_keycodes {
     C_CED_MAJ = SAFE_RANGE,
     E_ACU_MAJ,
-    E_CIRC,
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
@@ -351,7 +350,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case C_CED_MAJ:
         if (record->event.pressed) {
             // when keycode C_CED_MAJ is pressed
-            SEND_STRING(SS_LALT("128"));
+            SEND_STRING(SS_DOWN(X_LALT) SS_TAP(X_P1) SS_TAP(X_P2) SS_TAP(X_P8) SS_UP(X_LALT));
         } else {
             // when keycode C_CED_MAJ is released
         }
@@ -359,17 +358,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case E_ACU_MAJ:
         if (record->event.pressed) {
             // when keycode E_ACU_MAJ is pressed
-            SEND_STRING(SS_LALT("144"));
+            SEND_STRING(SS_DOWN(X_LALT) SS_TAP(X_P1) SS_TAP(X_P4) SS_TAP(X_P4) SS_UP(X_LALT));
         } else {
             // when keycode E_ACU_MAJ is released
-        }
-        break;
-    case E_CIRC:
-        if (record->event.pressed) {
-            // when keycode E_CIRC is pressed
-            SEND_STRING("ê");
-        } else {
-            // when keycode E_CIRC is released
         }
         break;
     }
@@ -383,7 +374,6 @@ const uint16_t PROGMEM a_grave_combo[] = {FR_A, FR_R, COMBO_END};
 const uint16_t PROGMEM e_acute_combo[] = {FR_N, FR_E, COMBO_END};
 const uint16_t PROGMEM e_acute_maj_combo[] = {FR_H ,FR_COMM, FR_DOT, COMBO_END};
 const uint16_t PROGMEM e_grave_combo[] = {FR_E, FR_I, COMBO_END};
-const uint16_t PROGMEM e_circ_combo[] = {FR_N, FR_E, FR_I, COMBO_END};
 const uint16_t PROGMEM u_grave_combo[] = {FR_U, FR_Y, COMBO_END};
 const uint16_t PROGMEM c_cedilla_combo[] = {FR_C, FR_D, COMBO_END};
 const uint16_t PROGMEM c_cedilla_maj_combo[] = {FR_X, FR_C, FR_D, COMBO_END};
@@ -392,7 +382,6 @@ combo_t key_combos[] = {
     COMBO(e_acute_combo, FR_EACU),
     COMBO(e_acute_maj_combo, E_ACU_MAJ),
     COMBO(e_grave_combo, FR_EGRV),
-    COMBO(e_circ_combo, E_CIRC),
     COMBO(u_grave_combo, FR_UGRV),
     COMBO(c_cedilla_combo, FR_CCED),
     COMBO(c_cedilla_maj_combo, C_CED_MAJ),
