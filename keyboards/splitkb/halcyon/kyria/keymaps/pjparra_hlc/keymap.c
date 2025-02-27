@@ -417,3 +417,18 @@ uint16_t get_quick_tap_term(uint16_t keycode, keyrecord_t *record) {
             return QUICK_TAP_TERM;
     }
 }
+
+//////////////////
+// OS detection
+//////////////////
+bool process_detected_host_os_user(os_variant_t detected_os) {
+    switch (detected_os) {
+        case OS_MACOS:
+        case OS_IOS:
+            default_layer_set(1 << _COLEMAK_DH_MAC);
+            break;
+        default:
+    }
+
+    return true;
+}
