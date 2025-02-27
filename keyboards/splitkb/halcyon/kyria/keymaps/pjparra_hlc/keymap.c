@@ -36,9 +36,6 @@ enum layers {
 #define CTL_MINS MT(MOD_RCTL, KC_MINUS)
 #define ALT_ENT  MT(MOD_LALT, KC_ENT)
 
-#define SFT_LPRN MT(MOD_LSFT, FR_LPRN)
-#define SFT_RPRN MT(MOD_RSFT, FR_RPRN)
-
 #define ALT_DEL  MT(MOD_LALT, KC_DEL)
 #define CTL_BSPC MT(MOD_LCTL, KC_BSPC)
 #define SFT_ENT  MT(MOD_LSFT, KC_ENT)
@@ -93,7 +90,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
     [_COLEMAK_DH] = LAYOUT_split_3x6_5_hlc(
      KC_TAB  , FR_Q ,  FR_W   ,  FR_F  ,   FR_P ,   FR_B ,                                        FR_J,   FR_L ,  FR_U ,   FR_Y ,FR_QUOT, KC_BSPC,
-     SFT_LPRN, FR_A ,  FR_R   ,  FR_S  ,   FR_T ,   FR_G ,                                        FR_M,   FR_N ,  FR_E ,   FR_I ,  FR_O ,SFT_RPRN,
+     SC_LSPO , FR_A ,  FR_R   ,  FR_S  ,   FR_T ,   FR_G ,                                        FR_M,   FR_N ,  FR_E ,   FR_I ,  FR_O , SC_RSPC,
      KC_LCTL , FR_Z ,  FR_X   ,  FR_C  ,   FR_D ,   FR_V , FR_LBRC, ADJUST,     FKEYS  , FR_RBRC, FR_K,   FR_H ,FR_COMM, FR_DOT ,FR_SLSH, KC_RCTL,
                                 KC_LGUI, ALT_DEL,CTL_BSPC, SFT_ENT, SYM   ,     NAV    , SFT_SPC, CTL_TAB, ALT_ESC, KC_RGUI,
      KC_MUTE, KC_NO,  KC_NO, KC_NO, KC_NO,                                                                KC_MUTE, KC_NO, KC_NO, KC_NO, KC_NO
@@ -118,8 +115,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
     [_COLEMAK_DH_MAC] = LAYOUT_split_3x6_5_hlc(
      KC_TAB  , FR_Q ,  FR_W   ,  FR_F  ,   FR_P ,   FR_B ,                                        FR_J,   FR_L ,  FR_U ,   FR_Y ,FR_QUOT, KC_BSPC,
-     SFT_LPRN, FR_A ,  FR_R   ,  FR_S  ,   FR_T ,   FR_G ,                                        FR_M,   FR_N ,  FR_E ,   FR_I ,  FR_O ,SFT_RPRN,
-     KC_LGUI , FR_Z ,  FR_X   ,  FR_C  ,   FR_D ,   FR_V , FR_LBRC, ADJUST,    FKEYS  , FR_RBRC, FR_K,   FR_H ,FR_COMM, FR_DOT ,FR_SLSH, KC_RGUI,
+     SC_LSPO , FR_A ,  FR_R   ,  FR_S  ,   FR_T ,   FR_G ,                                        FR_M,   FR_N ,  FR_E ,   FR_I ,  FR_O , SC_RSPC,
+     KC_LGUI , FR_Z ,  FR_X   ,  FR_C  ,   FR_D ,   FR_V , FR_LBRC, ADJUST,    FKEYS  , FR_RBRC,  FR_K,   FR_H ,FR_COMM, FR_DOT ,FR_SLSH, KC_RGUI,
                                 KC_LCTL, ALT_DEL,GUI_BSPC, SFT_ENT,SYM_MAC,    NAV_MAC, SFT_SPC, GUI_TAB, ALT_ESC, KC_RCTL,
      KC_MUTE, KC_NO,  KC_NO, KC_NO, KC_NO,                                                                KC_MUTE, KC_NO, KC_NO, KC_NO, KC_NO
     ),
@@ -143,7 +140,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
     [_QWERTY_MAC] = LAYOUT_split_3x6_5_hlc(
      KC_TAB  , FR_Q ,  FR_W   ,  FR_E  ,   FR_R ,   FR_T ,                                        FR_Y,   FR_U ,  FR_I ,   FR_O ,  FR_P , KC_BSPC,
-     SFT_LPRN, FR_A ,  FR_S   ,  FR_D  ,   FR_F ,   FR_G ,                                        FR_H,   FR_J ,  FR_K ,   FR_L ,FR_SCLN,SFT_RPRN,
+     SC_LSPO , FR_A ,  FR_S   ,  FR_D  ,   FR_F ,   FR_G ,                                        FR_H,   FR_J ,  FR_K ,   FR_L ,FR_SCLN, SC_RSPC,
      KC_LCTL , FR_Z ,  FR_X   ,  FR_C  ,   FR_V ,   FR_B , FR_LBRC, ADJUST,     FKEYS  , FR_RBRC, FR_N,   FR_M ,FR_COMM, FR_DOT ,FR_SLSH, KC_RGUI,
                                 KC_LCTL, ALT_DEL,GUI_BSPC, SFT_ENT,SYM_MAC,     NAV_MAC, SFT_SPC, GUI_TAB, ALT_ESC, KC_RCTL,
      KC_MUTE, KC_NO,  KC_NO, KC_NO, KC_NO,                                                                KC_MUTE, KC_NO, KC_NO, KC_NO, KC_NO
