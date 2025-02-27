@@ -54,13 +54,19 @@ enum layers {
 #define CUT      LCTL(FR_X)
 #define CPY      LCTL(FR_C)
 #define PST      LCTL(FR_V)
+#define SPST     LGUI(FR_V)
 #define RDO      LCTL(FR_Y)
+
+#define SESSLCK  LGUI(L)
 
 #define UDO_MAC  LGUI(FR_Z)
 #define CUT_MAC  LGUI(FR_X)
 #define CPY_MAC  LGUI(FR_C)
 #define PST_MAC  LGUI(FR_V)
+#define SPST_MAC LALT(LGUI(C))
 #define RDO_MAC  LSFT(LGUI(FR_Z))
+
+#define SLK_MAC  LCTL(LGUI(Q))
 
 // Note: LAlt/Enter (ALT_ENT) is not the same thing as the keyboard shortcut Alt+Enter.
 // The notation `mod/tap` denotes a key that activates the modifier `mod` when held down, and
@@ -147,11 +153,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * Nav Layer: Media, navigation
  *
  * ,-------------------------------------------.                              ,-------------------------------------------.
- * |        | PgUp | Home |   ↑  | End  | PrtSc|                              |      |BrwsBk|BrwsRf|BrwsFw| Calc |        |
+ * |        | PgUp | Home |   ↑  | End  | PrtSc|                              |CapsLk|BrwsBk|BrwsRf|BrwsFw| Calc |        |
  * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
- * |        | PgDn |  ←   |   ↓  |   →  |CapsLk|                              |      | Shift| Ctrl |  Alt |  GUI |        |
+ * |        | PgDn |  ←   |   ↓  |   →  |SPaste|                              |      | Shift| Ctrl |  Alt |  GUI |        |
  * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
- * |        | Undo |  Cut | Copy | Paste| Redo |NumLck|ScLck |  |      |      |      |      |      |      |      |        |
+ * |        | Undo |  Cut | Copy | Paste| Redo |NumLck|ScLck |  |      |      |      | Lock |      |      |      |        |
  * `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'
  *                        |      |      |      |      |LayLck|  |      |      |      |      |      |
  *                        |      |      |      |      |      |  |      |      |      |      |      |
@@ -161,9 +167,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------'                                              `-----------------------------------'
  */
     [_NAV] = LAYOUT_split_3x6_5_hlc(
-      _______, KC_PGUP, KC_HOME,   KC_UP,  KC_END, KC_PSCR,                                     _______, KC_WBAK, KC_WREF, KC_WFWD, KC_CALC, _______,
-      _______, KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT, KC_CAPS,                                     _______, KC_RSFT, KC_RCTL, KC_LALT, KC_RGUI, _______,
-      _______,     UDO,     CUT,     CPY,     PST,     RDO,  KC_NUM, KC_SCRL, _______, _______, _______, _______, _______, _______, _______, _______,
+      _______, KC_PGUP, KC_HOME,   KC_UP,  KC_END, KC_PSCR,                                     KC_CAPS, KC_WBAK, KC_WREF, KC_WFWD, KC_CALC, _______,
+      _______, KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT,    SPST,                                     _______, KC_RSFT, KC_RCTL, KC_LALT, KC_RGUI, _______,
+      _______,     UDO,     CUT,     CPY,     PST,     RDO,  KC_NUM, KC_SCRL, _______, _______, SESSLCK, _______, _______, _______, _______, _______,
                                  _______, _______, _______, _______, QK_LLCK, _______, _______, _______, _______, _______,
      _______, _______,  _______, _______, _______,                                                       _______, _______, _______, _______, _______
     ),
@@ -172,11 +178,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * Nav Mac Layer: Media, navigation
  *
  * ,-------------------------------------------.                              ,-------------------------------------------.
- * |        | PgUp | Home |   ↑  | End  | PrtSc|                              |      |BrwsBk|BrwsRf|BrwsFw| Calc |        |
+ * |        | PgUp | Home |   ↑  | End  | PrtSc|                              |CapsLk|BrwsBk|BrwsRf|BrwsFw| Calc |        |
  * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
- * |        | PgDn |  ←   |   ↓  |   →  |CapsLk|                              |      | Shift|  GUI |  Alt | Ctrl |        |
+ * |        | PgDn |  ←   |   ↓  |   →  |SPaste|                              |      | Shift|  GUI |  Alt | Ctrl |        |
  * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
- * |        | Undo |  Cut | Copy | Paste| Redo |NumLck|ScLck |  |      |      |      |      |      |      |      |        |
+ * |        | Undo |  Cut | Copy | Paste| Redo |NumLck|ScLck |  |      |      |      | Lock |      |      |      |        |
  * `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'
  *                        |      |      |      |      |LayLck|  |      |      |      |      |      |
  *                        |      |      |      |      |      |  |      |      |      |      |      |
@@ -186,9 +192,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------'                                              `-----------------------------------'
  */
     [_NAV_MAC] = LAYOUT_split_3x6_5_hlc(
-      _______, KC_PGUP, KC_HOME,   KC_UP,  KC_END, KC_PSCR,                                     _______, KC_WBAK, KC_WREF, KC_WFWD, KC_CALC, _______,
-      _______, KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT, KC_CAPS,                                     _______, KC_RSFT, KC_RGUI, KC_LALT, KC_RCTL, _______,
-      _______, UDO_MAC, CUT_MAC, CPY_MAC, PST_MAC, RDO_MAC,  KC_NUM, KC_SCRL, _______, _______, _______, _______, _______, _______, _______, _______,
+      _______, KC_PGUP, KC_HOME,   KC_UP,  KC_END, KC_PSCR,                                     KC_CAPS, KC_WBAK, KC_WREF, KC_WFWD, KC_CALC, _______,
+      _______, KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT,SPST_MAC,                                     _______, KC_RSFT, KC_RGUI, KC_LALT, KC_RCTL, _______,
+      _______, UDO_MAC, CUT_MAC, CPY_MAC, PST_MAC, RDO_MAC,  KC_NUM, KC_SCRL, _______, _______, SLK_MAC, _______, _______, _______, _______, _______,
                                  _______, _______, _______, _______, QK_LLCK, _______, _______, _______, _______, _______,
      _______, _______,  _______, _______, _______,                                                       _______, _______, _______, _______, _______
     ),
