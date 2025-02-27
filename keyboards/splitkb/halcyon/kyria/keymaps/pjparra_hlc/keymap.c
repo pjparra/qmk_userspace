@@ -60,7 +60,7 @@ enum layers {
 #define CUT_MAC  LGUI(FR_X)
 #define CPY_MAC  LGUI(FR_C)
 #define PST_MAC  LGUI(FR_V)
-#define SPST_MAC LALT(LGUI(C))
+#define SPST_MAC LALT(LGUI(FR_C))
 #define RDO_MAC  LSFT(LGUI(FR_Z))
 
 #define SLK_MAC  LCTL(LGUI(FR_Q))
