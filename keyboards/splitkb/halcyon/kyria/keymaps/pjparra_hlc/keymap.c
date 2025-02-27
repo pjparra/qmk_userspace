@@ -428,6 +428,7 @@ bool process_detected_host_os_user(os_variant_t detected_os) {
             default_layer_set(1 << _COLEMAK_DH_MAC);
             break;
         default:
+            break;
     }
 
     return true;
