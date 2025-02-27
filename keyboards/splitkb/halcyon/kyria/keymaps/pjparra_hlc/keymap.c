@@ -57,7 +57,7 @@ enum layers {
 #define SPST     LGUI(FR_V)
 #define RDO      LCTL(FR_Y)
 
-#define SESSLCK  LGUI(L)
+#define SESSLCK  LGUI(FR_L)
 
 #define UDO_MAC  LGUI(FR_Z)
 #define CUT_MAC  LGUI(FR_X)
@@ -66,7 +66,7 @@ enum layers {
 #define SPST_MAC LALT(LGUI(C))
 #define RDO_MAC  LSFT(LGUI(FR_Z))
 
-#define SLK_MAC  LCTL(LGUI(Q))
+#define SLK_MAC  LCTL(LGUI(FR_Q))
 
 // Note: LAlt/Enter (ALT_ENT) is not the same thing as the keyboard shortcut Alt+Enter.
 // The notation `mod/tap` denotes a key that activates the modifier `mod` when held down, and
