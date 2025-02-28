@@ -240,9 +240,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------'                                              `-----------------------------------'
  */
     [_SYM_MAC] = LAYOUT_split_3x6_5_hlc(
-      _______, MFR_MINS, MFR_UNDS, MFR_ASTR, MFR_AMPR, MFR_EURO,                                     MFR_LBRC,   MFR_7 ,   MFR_8 ,   MFR_9 , MFR_RBRC, _______,
-     MFR_LCBR, MFR_SCLN, MFR_CIRC, MFR_PERC,  MFR_DLR, MFR_PLUS,                                      MFR_EQL,   MFR_4 ,   MFR_5 ,   MFR_6 , MFR_COLN, MFR_RCBR,
-      _______, MFR_TILD,  KC_INT1,  KC_INT3, MFR_EXLM, MFR_PIPE, _______, _______, _______, _______, MFR_BSLS,   MFR_1 ,   MFR_2 ,   MFR_3 , MFR_GRV , _______,
+      _______, MFR_MINS,  MFR_UNDS, MFR_ASTR, MFR_AMPR, MFR_EURO,                                     MFR_LBRC,   MFR_7 ,   MFR_8 ,   MFR_9 , MFR_RBRC, _______,
+     MFR_LCBR, MFR_SCLN,  MFR_CIRC, MFR_PERC,  MFR_DLR, MFR_PLUS,                                      MFR_EQL,   MFR_4 ,   MFR_5 ,   MFR_6 , MFR_COLN, MFR_RCBR,
+      _______, MFR_TILD,S(KC_INT3),  KC_INT3, MFR_EXLM, MFR_PIPE, _______, _______, _______, _______, MFR_BSLS,   MFR_1 ,   MFR_2 ,   MFR_3 , MFR_GRV , _______,
                                  _______, _______, _______, _______, _______, QK_LLCK,   MFR_0 , MFR_COMM, MFR_DOT , _______,
      _______, _______,  _______, _______, _______,                                                       _______, _______, _______, _______, _______
     ),
