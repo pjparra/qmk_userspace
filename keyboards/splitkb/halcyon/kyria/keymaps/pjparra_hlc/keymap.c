@@ -398,6 +398,8 @@ const key_override_t comm_key_override = ko_make_basic(MOD_MASK_SHIFT, FR_COMM, 
 const key_override_t dot_key_override = ko_make_basic(MOD_MASK_SHIFT, FR_DOT, FR_RABK);
 const key_override_t quot_key_override = ko_make_basic(MOD_MASK_SHIFT, FR_QUOT, FR_DQUO);
 const key_override_t slash_key_override = ko_make_basic(MOD_MASK_SHIFT, FR_SLSH, FR_QUES);
+const key_override_t lbrc_key_override = ko_make_basic(MOD_MASK_SHIFT, FR_LBRC, FR_LCBR);
+const key_override_t rbrc_key_override = ko_make_basic(MOD_MASK_SHIFT, FR_RBRC, FR_RCBR);
 
 // This globally defines all key overrides to be used
 const key_override_t *key_overrides[] = {
@@ -405,6 +407,8 @@ const key_override_t *key_overrides[] = {
 	&dot_key_override,
 	&quot_key_override,
     &slash_key_override,
+    &lbrc_key_override,
+    &rbrc_key_override,
 };
 
 ////////////////
