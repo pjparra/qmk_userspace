@@ -55,14 +55,18 @@ enum layers {
 #define SPST     LGUI(FR_V)
 #define RDO      LCTL(FR_Y)
 
+#define SFT_0    MT(MOD_LSFT, FR_0)
+
 #define SESSLCK  LGUI(FR_L)
 
-#define UDO_MAC  LGUI(FR_Z)
-#define CUT_MAC  LGUI(FR_X)
-#define CPY_MAC  LGUI(FR_C)
-#define PST_MAC  LGUI(FR_V)
-#define SPST_MAC LALT(LGUI(FR_C))
-#define RDO_MAC  LSFT(LGUI(FR_Z))
+#define MUDO     LGUI(FR_Z)
+#define MCUT     LGUI(FR_X)
+#define MCPY     LGUI(FR_C)
+#define MPST     LGUI(FR_V)
+#define MSPST    LALT(LGUI(FR_C))
+#define MRDO     LSFT(LGUI(FR_Z))
+
+#define MSFT_0   MT(MOD_LSFT, MFR_0)
 
 #define SLK_MAC  LCTL(LGUI(FR_Q))
 
@@ -191,8 +195,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
     [_NAV_MAC] = LAYOUT_split_3x6_5_hlc(
       _______, KC_PGUP, KC_HOME,   KC_UP,  KC_END, KC_PSCR,                                     KC_CAPS, KC_WBAK, KC_WREF, KC_WFWD, KC_CALC, _______,
-      _______, KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT,SPST_MAC,                                     _______, KC_RSFT, KC_RGUI, KC_LALT, KC_RCTL, _______,
-      _______, UDO_MAC, CUT_MAC, CPY_MAC, PST_MAC, RDO_MAC,  KC_NUM, KC_SCRL, _______, _______, SLK_MAC, _______, _______, _______, _______, _______,
+      _______, KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT,   MSPST,                                     _______, KC_RSFT, KC_RGUI, KC_LALT, KC_RCTL, _______,
+      _______,    MUDO,    MCUT,    MCPY,    MPST,    MRDO,  KC_NUM, KC_SCRL, _______, _______, SLK_MAC, _______, _______, _______, _______, _______,
                                  _______, _______, _______, _______, QK_LLCK, _______, _______, _______, _______, _______,
      _______, _______,  _______, _______, _______,                                                       _______, _______, _______, _______, _______
     ),
@@ -218,7 +222,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       _______, FR_MINS, FR_UNDS, FR_ASTR, FR_AMPR, FR_EURO,                                     FR_LBRC,   FR_7 ,   FR_8 ,   FR_9 , FR_RBRC, _______,
      FR_LCBR , FR_SCLN, FR_CIRC, FR_PERC,  FR_DLR, FR_PLUS,                                      FR_EQL,   FR_4 ,   FR_5 ,   FR_6 , FR_COLN, FR_RCBR,
       _______, FR_TILD, FR_HASH,   FR_AT, FR_EXLM, FR_PIPE, _______, _______, _______, _______, FR_BSLS,   FR_1 ,   FR_2 ,   FR_3 , FR_GRV , _______,
-                                 _______, _______, _______, _______, _______, QK_LLCK,   FR_0 , FR_COMM, FR_DOT , _______,
+                                 _______, _______, _______, _______, _______, QK_LLCK,   SFT_0, FR_COMM, FR_DOT , _______,
      _______, _______,  _______, _______, _______,                                                       _______, _______, _______, _______, _______
     ),
 
@@ -240,10 +244,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------'                                              `-----------------------------------'
  */
     [_SYM_MAC] = LAYOUT_split_3x6_5_hlc(
-      _______, MFR_MINS,  MFR_UNDS, MFR_ASTR, MFR_AMPR, MFR_EURO,                                     MFR_LBRC,   MFR_7 ,   MFR_8 ,   MFR_9 , MFR_RBRC, _______,
-     MFR_LCBR, MFR_SCLN,  MFR_CIRC, MFR_PERC,  MFR_DLR, MFR_PLUS,                                      MFR_EQL,   MFR_4 ,   MFR_5 ,   MFR_6 , MFR_COLN, MFR_RCBR,
-      _______, MFR_TILD,S(KC_INT3),  KC_INT3, MFR_EXLM, MFR_PIPE, _______, _______, _______, _______, MFR_BSLS,   MFR_1 ,   MFR_2 ,   MFR_3 , MFR_GRV , _______,
-                                 _______, _______, _______, _______, _______, QK_LLCK,   MFR_0 , MFR_COMM, MFR_DOT , _______,
+      _______,MFR_MINS,  MFR_UNDS,MFR_ASTR,MFR_AMPR,MFR_EURO,                                    MFR_LBRC,  MFR_7 ,  MFR_8 ,  MFR_9 ,MFR_RBRC, _______,
+     MFR_LCBR,MFR_SCLN,  MFR_CIRC,MFR_PERC, MFR_DLR,MFR_PLUS,                                     MFR_EQL,  MFR_4 ,  MFR_5 ,  MFR_6 ,MFR_COLN,MFR_RCBR,
+      _______,MFR_TILD,S(KC_INT3), KC_INT3,MFR_EXLM,MFR_PIPE, _______, _______, _______, _______,MFR_BSLS,  MFR_1 ,  MFR_2 ,  MFR_3 ,MFR_GRV , _______,
+                                 _______, _______, _______, _______, _______, QK_LLCK, MSFT_0 ,MFR_COMM, MFR_DOT, _______,
      _______, _______,  _______, _______, _______,                                                       _______, _______, _______, _______, _______
     ),
 
