@@ -55,7 +55,7 @@ enum layers {
 #define SPST     LGUI(FR_V)
 #define RDO      LCTL(FR_Y)
 
-#define SFT_0    MT(MOD_LSFT, FR_0)
+#define SFT_0    MT(MOD_LSFT, LSFT(KC_0))
 
 #define SESSLCK  LGUI(FR_L)
 
@@ -66,7 +66,7 @@ enum layers {
 #define MSPST    LALT(LGUI(FR_C))
 #define MRDO     LSFT(LGUI(FR_Z))
 
-#define MSFT_0   MT(MOD_LSFT, MFR_0)
+#define MSFT_0   MT(MOD_LSFT, LSFT(KC_0))
 
 #define SLK_MAC  LCTL(LGUI(FR_Q))
 
